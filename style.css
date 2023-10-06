@@ -1,0 +1,193 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+    text-decoration: none; 
+   } 
+    
+   :focus,:active{outline: none;} 
+   a:focus,a:active{outline: none;} 
+    
+   nav,footer,header,aside{display: block;} 
+    
+    
+   input,button,textarea{font-family:inherit;} 
+    
+   input::-ms-clear{display: none;} 
+   button{cursor: pointer;} 
+   button::-moz-focus-inner {padding:0;border:0;} 
+   a, a:visited{text-decoration: none;} 
+   a:hover{text-decoration: none;} 
+   ul li{list-style: none;} 
+   img{vertical-align: top;} 
+    
+   h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} 
+    
+   html{ 
+    scroll-behavior: smooth; 
+   }
+
+    body{
+        background-image: url(./imag/фон.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+
+
+
+.container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.cat{
+    width: 350px;
+    position: absolute;
+    z-index: 1;
+    top: -17px;
+    transform: rotate(8deg); 
+
+}
+
+.table {
+    width: 400px;
+    position: absolute;
+    top: 50px;
+}
+
+.sky {
+    width: 500px;
+    position: absolute;
+}
+.rope {
+    width: 240px;
+    position: absolute;
+    top: -198px;
+    transform: rotate(12deg);    
+}
+.clock {
+    background-image: url(./imag/a-brown-marble-with-a-brown-background_873925-4640.avif);
+    background-size: cover;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 230px;
+    box-shadow: 10px 10px 15px #000000, inset 3px 3px 10px #000000;
+    border: 2px solid #000000;
+    animation: clock 4s linear infinite alternate;
+    transform-origin: top;
+    transition: 0.5s;
+}
+
+@keyframes clock{
+    0%{
+        transform: rotate(40deg) translateX(-150px) translateY(0px);
+    }
+    100%{
+        transform:rotate(-40deg) translateX(150px) translateY(0px);
+    }
+}
+
+.clock:hover{
+    background-image: url(./imag/simple-and-elegant-printable-invitaiton-background-design-template-decoration_174415-67.avif);
+    border: 2px solid #ffffff;
+}
+
+
+.clock:hover .number-item{
+    color: #000;
+}
+
+.second {
+    width: 3px;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 50%;
+    animation: second 60s steps(60, end)  infinite;/* steps - кожну секунду зупиняється */
+    transform-origin: bottom;/* фіксує точку анімації */
+    box-shadow: 5px 5px 5px #000000, inset 1px 1px 1px #232323;
+}
+@keyframes second{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.minute {
+    width: 3px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 50%;
+    animation: second 3600s steps(3600, end)  infinite;/* steps - кожну секунду зупиняється */
+    transform-origin: bottom;/* фіксує точку анімації */
+    box-shadow: 5px 5px 5px #000000, inset 1px 1px 1px #232323;
+}
+
+
+
+.hour {
+    width: 3px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 50%;
+    animation: second 216000s steps(216000, end)  infinite;/* steps - кожну секунду зупиняється */
+    transform-origin: bottom;/* фіксує точку анімації */
+    box-shadow: 5px 5px 5px #000000, inset 1px 1px 1px #232323;
+}
+.round {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    box-shadow: 5px 5px 5px #000000, inset 1px 1px 1px #7b7b7b;
+    
+}
+.number {
+}
+.number-item {
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow:3px 3px 8px  #000000;
+    color: #ffffff;
+}
+
+
+.number-item:nth-child(1){
+    top: 10px;
+    left: 45%;
+}
+
+
+.number-item:nth-child(2){
+    right: 10px;
+    bottom: 40%;
+}
+.number-item:nth-child(3){
+    bottom: 10px;
+    left: 47%;
+}
+.number-item:nth-child(4){
+    left: 10px;
+    bottom: 40%;
+}
